@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Product Catalog Manager</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Product Catalog Manager</h1>
+
+    <section id="categories">
+      <h2>Categories</h2>
+      <div id="categoryList"></div>
+      <div class="form-row">
+        <input id="catName" placeholder="Category name">
+        <input id="catDesc" placeholder="Description">
+        <button id="createCategoryBtn">Create Category</button>
+      </div>
+    </section>
+
+    <section id="categoryDetail" class="hidden">
+      <h2 id="catTitle">Category: </h2>
+
+      <div class="subpanel">
+        <h3>Attributes</h3>
+        <div id="attributesList"></div>
+        <div class="form-row">
+          <input id="attrName" placeholder="Attribute name">
+          <select id="attrType">
+            <option value="string">String</option>
+            <option value="number">Number</option>
+            <option value="boolean">Boolean</option>
+            <option value="enum">Enum (options comma separated)</option>
+            <option value="text">Text</option>
+            <option value="date">Date</option>
+          </select>
+          <input id="attrOptions" placeholder="Options (comma separated, only for enum)">
+          <button id="createAttributeBtn">Add Attribute</button>
+        </div>
+      </div>
+
+      <div class="subpanel">
+        <h3>Products</h3>
+        <div id="productsList"></div>
+
+        <h4>Create Product</h4>
+        <div id="productForm"></div>
+        <button id="createProductBtn">Create Product</button>
+      </div>
+
+      <button id="backBtn">Back to categories</button>
+    </section>
+
+    <div id="message" class="message"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
