@@ -27,7 +27,7 @@ async function initDb(){
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname)));
 
 // Helper: query
 async function query(sql, params){
